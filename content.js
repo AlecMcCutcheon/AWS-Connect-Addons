@@ -1,6 +1,6 @@
 let link;
 
-fetch('https://raw.githubusercontent.com/AlecMcCutcheon/AWS-Connect-Addons/Hosted-JS/Hosted%20JS/Dyn%20Link.JSON')
+fetch('https://raw.githubusercontent.com/AlecMcCutcheon/AWS-Connect-Addons/Hosted-JS/Dyn%20Link.JSON')
   .then(response => response.text())
   .then(text => {
     link = JSON.parse(text).LINK;
