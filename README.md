@@ -8,6 +8,19 @@ which might not align with your security practices.
 
 Note: The extension saves all data to local storage and it's not tied to your AWS account. Meaning if you switch browsers or clear your browsing data you might have to reconfigure the settings to your liking.
 
+# Using The Unpacked Extension.
+
+1) Download and Unzip the Repo
+2) Place "AWS Custom Addons" Somewhere convenient, but do not move it after adding it to your browser.
+3) You can Delete "Hosted JS" as that's the code that the extension pulls from on Github
+4) open a chromium based browser and navigate to extensions
+5) flip the "Developer Mode" Switch
+6) click on "Load Unpacked"
+7) navigate to your "AWS Custom Addons" folder, and click Select.
+8) Done! Reload The AWS Pages affected by the extension to see the changes
+
+When updates are pushed through github you will see the changes next time you reload the pages.
+
 Currently The unpacked extension provides these Addons
 
 * A Customizable Sub-Second Refresh for AWS Connect Real Time Metrics Page With Auto-Pause on button interaction. (Saves Automatically) 
