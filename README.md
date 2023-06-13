@@ -12,7 +12,6 @@ Note: The extension saves all data to local storage and is not tied to your AWS 
 
 1) Download and Unzip the Repo
 2) Place "AWS Custom Addons" Somewhere convenient, but do not move it after adding it to your browser.
-3) You can Delete "Hosted JS" as that's the code that the extension pulls from on Github
 4) open a chromium based browser and navigate to extensions
 5) flip the "Developer Mode" Switch
 6) click on "Load Unpacked"
