@@ -21,7 +21,7 @@ Note: The extension saves all data to local storage and it's not tied to your AW
 
 When updates are pushed through github you will see the changes next time you reload the pages.
 
-Currently The unpacked extension provides these Addons
+# Current Addons
 
 * A Customizable Sub-Second Refresh for AWS Connect Real Time Metrics Page With Auto-Pause on button interaction. (Saves Automatically) 
 * A Dark Mode and theme toggle switch (Under Actions) for AWS Connect Real Time Metrics Page. (Saves Automatically) 
