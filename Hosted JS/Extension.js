@@ -831,9 +831,8 @@ function handleMouse(event) {
 }
 
 // create continuous interval to check for data-testid="settings-modal" element and if it exists, add
-window.onload = function() {
   waitForElement();
   SetAutoPauseListeners();
-};
+
 
 }
