@@ -6,7 +6,7 @@ With that being said, it should work in any instance of Amazon connect and you a
 just keep in mind that the way that it is written currently, any code changes will be pushed directly to you, 
 which might not align with your security practices.
 
-Note: The extension saves all data to local storage and it's not tied to your AWS account. Meaning if you switch browsers or clear your browsing data you might have to reconfigure the settings to your liking.
+Note: The extension saves all data to local storage and is not tied to your AWS account. Meaning if you switch browsers or clear your browsing data you might have to reconfigure the settings to your liking.
 
 # Using The Unpacked Extension.
 
