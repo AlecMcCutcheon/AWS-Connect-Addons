@@ -11,11 +11,11 @@ Note: The extension saves all data to local storage and is not tied to your AWS 
 # Using The Unpacked Extension.
 
 1) Download and Unzip the Repo
-2) Place "AWS Custom Addons" Somewhere convenient, but do not move it after adding it to your browser.
+2) Place "AWS-Connect-Addons-main" Somewhere convenient, but do not move it after adding it to your browser.
 4) open a chromium based browser and navigate to extensions
 5) flip the "Developer Mode" Switch
 6) click on "Load Unpacked"
-7) navigate to your "AWS Custom Addons" folder, and click Select.
+7) navigate to your "AWS-Connect-Addons-main" folder, and click Select.
 8) Done! Reload The AWS Pages affected by the extension to see the changes
 
 When updates are pushed through github you will see the changes next time you reload the pages.
