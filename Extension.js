@@ -448,11 +448,8 @@ if (RTMetricsRegex.test(window.location.href)) {
         background-color: transparent !important;
       }
       
-      .styles_button-dropdown__label__-yQGX,
-      .styles_icon__Q-srh,
-      .styles_icon--settings__Jinmk {
+      .styles_button-dropdown__label__-yQGX {
         background-color: transparent !important;
-	color: #f1f3f4 !important;
       }
       
       button[class="styles_button__9Zhlj styles_button--secondary__un7Ua "]:hover,
@@ -764,7 +761,7 @@ function waitForElement() {
     iconbuttonwrapper.setAttribute('role', 'img');
     iconbuttonwrapper.setAttribute('aria-hidden', 'true');
     var icon = document.createElement('span');
-    icon.setAttribute('class', 'styles_icon__Q-srh styles_icon--settings__Jinmk');
+    icon.setAttribute('class', 'styles_icon__Q-srh styles_icon-button__icon__IC-A-');
     iconbuttonwrapper.appendChild(icon);
     reloadControlsDiv.appendChild(newButton);
     reloadControlsDiv.appendChild(iconbuttonwrapper);
