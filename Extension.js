@@ -452,6 +452,7 @@ if (RTMetricsRegex.test(window.location.href)) {
       .styles_icon__Q-srh,
       .styles_icon--settings__Jinmk {
         background-color: transparent !important;
+	color: #f1f3f4 !important;
       }
       
       button[class="styles_button__9Zhlj styles_button--secondary__un7Ua "]:hover,
