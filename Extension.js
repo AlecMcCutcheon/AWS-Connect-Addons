@@ -691,57 +691,59 @@ RTRefreshSpeedFunction.innerHTML = SetRTRefreshSpeed;
 document.body.appendChild(RTRefreshSpeedFunction);
 
 async function RTRefreshToggleMain() {
-    
     function Start() {
-    localStorage.setItem('RTRefreshEnabled', true);
-		document.getElementById('RT Refresh Toggle Text').innerHTML = 'RT Refresh: ON';
-		document.getElementById('RT Refresh Toggle Text').parentElement.className = 'styles_button__9Zhlj styles_button--primary__2YmLM '
-		document.querySelector('button[aria-label=\'Reload data\']').style.display = 'none';
-		document.querySelector('button[data-testid="reload-controls-play-btn"]').style.display = 'none';
-    if (localStorage.getItem('RTRefreshSpeedMS') === null) {localStorage.setItem('RTRefreshSpeedMS', 250);}
+        localStorage.setItem('RTRefreshEnabled', true);
+        const toggleTextElement = document.getElementById('RT Refresh Toggle Text');
+        toggleTextElement.innerHTML = 'RT Refresh: ON';
+        const parentElement = toggleTextElement.parentElement;
+        parentElement.classList.remove('styles_button--secondary__un7Ua');
+        parentElement.classList.add('styles_button--primary__2YmLM');
+        const reloadDataButton = document.querySelector('button[aria-label=\'Reload data\']');
+        reloadDataButton.style.display = 'none';
+        const reloadControlsPlayButton = document.querySelector('button[data-testid="reload-controls-play-btn"]');
+        reloadControlsPlayButton.style.display = 'none';
+        if (localStorage.getItem('RTRefreshSpeedMS') === null) {
+            localStorage.setItem('RTRefreshSpeedMS', 250);
+        }
         RefreshTimer = setInterval(function() {
-            document.querySelector('button[aria-label=\'Reload data\']').click();
+            reloadDataButton.click();
             try {
-                document.getElementById('jQuery').remove();
+                document.getElementById('RTRefreshScript').remove();
             } catch (err) {}
         }, localStorage.getItem('RTRefreshSpeedMS'));
     }
-    
+
     function Stop() {
-    localStorage.setItem('RTRefreshEnabled', false);
-		document.getElementById('RT Refresh Toggle Text').innerHTML = 'RT Refresh: OFF';
-		document.getElementById('RT Refresh Toggle Text').parentElement.className = 'styles_button__9Zhlj styles_button--secondary__un7Ua '
-		document.querySelector('button[aria-label=\'Reload data\']').style.display = 'flex';
-		document.querySelector('button[data-testid="reload-controls-play-btn"]').style.display = 'flex';
+        localStorage.setItem('RTRefreshEnabled', false);
+        const toggleTextElement = document.getElementById('RT Refresh Toggle Text');
+        toggleTextElement.innerHTML = 'RT Refresh: OFF';
+        const parentElement = toggleTextElement.parentElement;
+        parentElement.classList.remove('styles_button--primary__2YmLM');
+        parentElement.classList.add('styles_button--secondary__un7Ua');
+        const reloadDataButton = document.querySelector('button[aria-label=\'Reload data\']');
+        reloadDataButton.style.display = 'flex';
+        const reloadControlsPlayButton = document.querySelector('button[data-testid="reload-controls-play-btn"]');
+        reloadControlsPlayButton.style.display = 'flex';
         clearInterval(RefreshTimer);
     }
-    
+
     var callback = function() {
         if (typeof Timer === 'undefined') {
             Timer = false;
         }
-        
+
         Timer = !Timer; // Toggle the Timer value
-        
+
         if (Timer) {
             Start();
         } else {
             Stop();
         }
     };
-    
-    var script = document.createElement('script');
-    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js';
-    script.id = 'jQuery';
-    
-    if (script.addEventListener) {
-        script.addEventListener('load', callback, false);
-    } else if (script.readyState) {
-        script.onreadystatechange = callback;
-    }
-    
-    document.body.appendChild(script);
+
+    callback(); // Calling callback directly as there's no jQuery script to load
 }
+
 
 function waitForElement() {
   var reloadControlsDiv = document.querySelector('[data-testid="reload-controls"]');
