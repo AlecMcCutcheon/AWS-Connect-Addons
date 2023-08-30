@@ -448,7 +448,9 @@ if (RTMetricsRegex.test(window.location.href)) {
         background-color: transparent !important;
       }
       
-      .styles_button-dropdown__label__-yQGX {
+      .styles_button-dropdown__label__-yQGX,
+      .styles_icon__Q-srh,
+      .styles_icon--settings__Jinmk {
         background-color: transparent !important;
       }
       
